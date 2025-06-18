@@ -1,59 +1,69 @@
-# ProjetFilRouge
+# Gestion des Dettes - Application Angular 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+## Connexion
 
-## Development server
+Pour accéder à l’application, utilisez les identifiants suivants :
 
-To start a local development server, run:
+- **Nom d’utilisateur** : `admin`
+- **Mot de passe** : `admin`
 
-```bash
-ng serve
-```
+> **Note :** Seul cet utilisateur permet de se connecter (authentification mockée).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Fonctionnalités personnalisées
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Palette marron** : Toute l’interface utilise des couleurs marron pour un rendu élégant et professionnel.
+- **Gestion complète des clients, dettes et paiements** :
+  - Ajout, modification, suppression de clients et de dettes.
+  - Paiement partiel ou total d’une dette, avec calcul automatique du montant restant.
+  - Historique détaillé des paiements pour chaque dette.
+  - Badge « Payée » pour les dettes soldées.
+- **Navigation moderne** :
+  - Header et footer stylisés, masqués sur la page de connexion.
+  - Bouton de déconnexion accessible partout.
+- **Sécurité** :
+  - Accès à l’application protégé par une page de connexion.
+  - Redirection automatique vers la liste des clients après connexion.
+- **Backend mocké** :
+  - Utilisation de `json-server` pour simuler une API REST.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Lancement du projet
 
-```bash
-ng generate --help
-```
+1. **Installer les dépendances**
+   ```bash
+   npm install
+   ```
+2. **Démarrer le backend mocké**
+   ```bash
+   npx json-server --watch db.json --port 3000
+   ```
+3. **Démarrer l’application Angular**
+   ```bash
+   ng serve
+   ```
+4. **Accéder à l’application**
+   - Ouvrez [http://localhost:4200](http://localhost:4200) dans votre navigateur.
 
-## Building
+---
 
-To build the project run:
+## Points de personnalisation et complexité
 
-```bash
-ng build
-```
+- **Gestion dynamique des paiements** : chaque paiement met à jour en temps réel le montant payé et restant.
+- **Historique interactif** : possibilité d’afficher/masquer l’historique des paiements pour chaque dette.
+- **Palette de couleurs** : tout le design a été adapté pour une identité visuelle marron, avec des boutons, badges et fonds harmonisés.
+- **Navigation conditionnelle** : header/footer masqués sur la page de connexion, présents partout ailleurs.
+- **Code structuré et modulaire** : séparation claire des services, modèles, composants, et logique métier.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## Remarques pour l’enseignant
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Ce projet va au-delà d’un simple CRUD :
+- Il gère la logique métier réelle d’une gestion de dettes (paiements partiels, historique, calculs dynamiques).
+- L’interface est moderne, responsive, et personnalisée.
+- Le code est prêt à être adapté pour une vraie API ou une authentification réelle.
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+N’hésitez pas à tester toutes les fonctionnalités pour voir la personnalisation et la complexité apportées.
