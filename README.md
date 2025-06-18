@@ -1,5 +1,5 @@
 # Gestion des Dettes - Application Angular 
-
+Entrer dans src : c'est où se trouve le projet 
 ## Connexion
 
 Pour accéder à l’application, utilisez les identifiants suivants :
