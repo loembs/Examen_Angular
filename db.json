@@ -1,0 +1,130 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "nom": "Jean Dupont",
+      "telephone": "0123456789",
+      "adresse": "123 Rue de Paris"
+    },
+    {
+      "id": "2",
+      "nom": "Marie Martin",
+      "telephone": "0987654321",
+      "adresse": "456 Avenue des Fleurs"
+    },
+    {
+      "id": "745a",
+      "nom": "patrick",
+      "telephone": "7777777",
+      "adresse": "GD-RUE44"
+    }
+  ],
+  "dettes": [
+    {
+      "id": "1",
+      "clientId": 1,
+      "date": "2024-03-20",
+      "montantDette": 1000,
+      "montantPaye": 1000,
+      "montantRestant": 0
+    },
+    {
+      "id": "fafa",
+      "montantDette": 50000,
+      "date": "2025-06-18",
+      "clientId": 2,
+      "montantPaye": 0,
+      "montantRestant": 50000
+    },
+    {
+      "id": "1248",
+      "montantDette": 500,
+      "date": "2025-06-18",
+      "clientId": 2,
+      "montantPaye": 0,
+      "montantRestant": 500
+    },
+    {
+      "id": "1266",
+      "montantDette": 1000,
+      "date": "2025-06-18",
+      "clientId": 1,
+      "montantPaye": 5600,
+      "montantRestant": -4600
+    }
+  ],
+  "paiements": [
+    {
+      "id": "1",
+      "detteId": 1,
+      "date": "2024-03-21",
+      "montant": 500
+    },
+    {
+      "id": "108b",
+      "detteId": "1",
+      "date": "2025-06-18",
+      "montant": 500
+    },
+    {
+      "id": "3573",
+      "detteId": null,
+      "date": "2025-06-18",
+      "montant": 50
+    },
+    {
+      "id": "cff8",
+      "detteId": null,
+      "date": "2025-06-18",
+      "montant": 4000
+    },
+    {
+      "id": "16d9",
+      "detteId": null,
+      "date": "2025-06-18",
+      "montant": 950
+    },
+    {
+      "id": "ee4f",
+      "detteId": null,
+      "date": "2025-06-18",
+      "montant": 100
+    },
+    {
+      "id": "56cf",
+      "detteId": null,
+      "date": "2025-06-18",
+      "montant": 100
+    },
+    {
+      "id": "6de5",
+      "detteId": "fafa",
+      "date": "2025-06-18",
+      "montant": 100
+    },
+    {
+      "id": "94bf",
+      "detteId": "fafa",
+      "date": "2025-06-18",
+      "montant": 200
+    },
+    {
+      "id": "bc5c",
+      "detteId": "fafa",
+      "date": "2025-06-18",
+      "montant": 400
+    },
+    {
+      "id": "6daf",
+      "detteId": "1248",
+      "date": "2025-06-18",
+      "montant": 50
+    },
+    {
+      "id": "c072",
+      "detteId": 1266,
+      "date": "2025-06-18",
+      "montant": 400
+    }
+  ]
+}

@@ -1,34 +1,31 @@
-import { Component, inject } from '@angular/core';
-import { HearderComponent } from './pages/dashboard/components/layout/hearder/hearder.component';
-import { FooterComponent } from './pages/dashboard/components/layout/footer/footer.component';
-import { NavComponent } from './shared/components/nav/nav.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
+import { HeaderComponent } from './pages/dashboard/components/layouts/header/header.component';
+import { FooterComponent } from './pages/dashboard/components/layouts/footer/footer.component';
 
 @Component({
-  standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet ,NavComponent , CommonModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
+  template: `
+    <div class="min-h-screen bg-gray-100">
+      <app-header *ngIf="!isLoginPage()"></app-header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer *ngIf="!isLoginPage()"></app-footer>
+    </div>
+  `,
+  styles: []
 })
-
-
 export class AppComponent {
-  title = 'Front-Patrick';
-  showNavbar = false; 
+  constructor(private router: Router) {}
 
-  private router = inject(Router);
-
-  constructor() {
-  this.router.events.pipe(
-    filter(event => event instanceof NavigationEnd)
-  ).subscribe((event: NavigationEnd) => {
-    this.showNavbar = !event.urlAfterRedirects.includes('/security');
-  });
-}
+  isLoginPage(): boolean {
+    return this.router.url === '/login';
+  }
 }
 
 

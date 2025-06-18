@@ -5,3 +5,62 @@
     border-color: red !important; /* Utilise !important si nécessaire pour annuler les styles Tailwind ou Bootstrap par défaut */
 
   }
+
+/* Palette marron personnalisée */
+:root {
+  --main-brown: #7c4a03;
+  --light-brown: #b07d45;
+  --dark-brown: #4e2e00;
+  --brown-bg: #f7f3ef;
+  --brown-text: #4e2e00;
+  --brown-accent: #a05a2c;
+}
+
+body, .bg-gray-100, .bg-gray-50 {
+  background-color: var(--brown-bg) !important;
+  color: var(--brown-text) !important;
+}
+
+header, .bg-white, .shadow, .rounded-lg, .rounded, .container, .card, .bg-white.rounded-lg.shadow-md {
+  background-color: #fff8f3 !important;
+  border-color: var(--main-brown) !important;
+}
+
+.text-gray-800, .text-gray-900, h1, h2, h3, h4, h5, h6 {
+  color: var(--main-brown) !important;
+}
+
+.text-blue-800, .text-blue-600, .text-blue-900, .text-blue-500, .text-blue-100, .hover\:text-blue-600:hover, .hover\:bg-blue-200:hover, .hover\:bg-blue-100:hover {
+  color: var(--brown-accent) !important;
+  background-color: #f3e1d3 !important;
+}
+
+.bg-blue-500, .bg-blue-600, .bg-blue-100, .hover\:bg-blue-600:hover, .hover\:bg-blue-200:hover, .hover\:bg-blue-100:hover {
+  background-color: var(--main-brown) !important;
+  color: #fff !important;
+}
+
+button, .btn, .rounded-md, .rounded {
+  border-radius: 6px !important;
+}
+
+.bg-green-500, .bg-green-600, .bg-green-100, .hover\:bg-green-600:hover {
+  background-color: var(--light-brown) !important;
+  color: #fff !important;
+}
+
+.bg-yellow-100, .text-yellow-600, .hover\:bg-yellow-200:hover, .hover\:text-yellow-900:hover {
+  background-color: #e2c199 !important;
+  color: var(--dark-brown) !important;
+}
+
+.bg-red-500, .bg-red-600, .bg-red-100, .hover\:bg-red-600:hover {
+  background-color: #a05a2c !important;
+  color: #fff !important;
+}
+
+footer, .bg-white.border-t {
+  background-color: #fff8f3 !important;
+  color: var(--main-brown) !important;
+  border-top: 2px solid var(--main-brown) !important;
+}
